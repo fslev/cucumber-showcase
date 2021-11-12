@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="CalculatorTestSuite" data-provider-thread-count="1">
-    <test name="CalculatorTest">
-        <packages>
-            <package name="io.example.*"/>
-        </packages>
-    </test>
-</suite>

@@ -1,8 +1,11 @@
 package io.example;
 
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
+import org.junit.platform.suite.api.IncludeEngines;
+import org.junit.platform.suite.api.SelectClasspathResource;
+import org.junit.platform.suite.api.Suite;
 
-//@CucumberOptions(features = "src/test/resources/features")
-public class CalculatorTest extends AbstractTestNGCucumberTests {
+@Suite
+@IncludeEngines({"cucumber"})
+@SelectClasspathResource("io/example")
+public class CalculatorTest {
 }
