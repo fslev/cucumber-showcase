@@ -1,25 +1,38 @@
-Feature: Calculator feature
+@all
+Feature: Concurrency feature
 
-  @happy
-  Scenario: Add two numbers (happy)
-    * Check 3 + 2 = 5
-
-  @negative
-  Scenario: Add two numbers (negative)
-    * Check 3 + 2 != 4
-
-  @wait
-  Scenario Template: Concurrency test: take <take>
+  @serial1 @test
+  Scenario: Concurrency test 1
     * Wait 3s
-    Examples:
-      | take |
-      | 1    |
-      | 2    |
-      | 3    |
-      | 4    |
-      | 5    |
-      | 6    |
-      | 7    |
-      | 8    |
-      | 9    |
-      | 10   |
+
+  @serial1 @test
+  Scenario: Concurrency test 2
+    * Wait 3s
+
+  @test
+  Scenario: Concurrency test 11
+    * Wait 3s
+
+  @test
+  @isolated
+  Scenario: Concurrency test 3
+    * Wait 3s
+
+  @test
+  Scenario: Concurrency test 6
+    * Wait 3s
+
+  @test
+  Scenario: Concurrency test 7
+    * Wait 3s
+
+  @test
+  Scenario: Concurrency test 8
+    * Wait 3s
+
+  Scenario: Concurrency test 9
+    * Wait 3s
+
+  Scenario: Concurrency test 10
+    * Wait 3s
+
