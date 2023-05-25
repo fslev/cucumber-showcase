@@ -1,5 +1,4 @@
 Feature: Feature 2
-  # some comment
   some description
 
   Scenario: Scenario 2_1
