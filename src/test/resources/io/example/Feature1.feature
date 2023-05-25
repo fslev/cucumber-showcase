@@ -1,5 +1,6 @@
 Feature: Feature 1
 
+  @1
   Scenario: Scenario 1_1
     * Wait 3s
 
